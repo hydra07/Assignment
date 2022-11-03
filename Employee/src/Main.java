@@ -2,23 +2,15 @@
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Scanner;
-import com.Caculate;
-import com.File;
-import com.Compare;
-import com.Menu;
-import com.Employee;
-import com.Management;
-import com.Leader;
-import com.Dev;
+//import java.util.Scanner;
 
 public class Main {
 
-	public static Scanner sc = new Scanner(System.in);
+//	public static Scanner sc = new Scanner(System.in);
 	public static ArrayList<Employee> employeeList = new ArrayList<Employee>();
 	public static void main(String[] args) throws IOException, NumberFormatException, ParseException {
 		String[] options = { "Input from CSV file", "Caculate","Caculate All","Print sort income","Print sort role","Export file", "Exit" };
-		int choice =0;
+		int choice;
 	
 		do{
 				System.out.println("Enter number: ");

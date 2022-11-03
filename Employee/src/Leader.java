@@ -1,7 +1,4 @@
-
-
 import java.util.Date;
-
 public class Leader extends Employee {
 
 	private int reviewTaskNumber;
@@ -15,9 +12,11 @@ public class Leader extends Employee {
 	}
 
 	public double calAllowance() {
-
 		Date currentDate = new Date();
-		int numberMonthWork = (int) ((currentDate.getTime() - this.getWorkStartingDate().getTime()) / 3600);
+		Date workStartingDate = this.getWorkStartingDate();
+		long tmp = Math.abs(currentDate.getTime()-workStartingDate.getTime());
+		long tmp2 = tmp/(24*60*60*1000);
+		long numberMonthWork =  (((tmp2)*8)/30);
 		if (numberMonthWork >= 36) {
 			return this.getProductivityScore() * 2000000;
 		} else {
@@ -61,7 +60,7 @@ public class Leader extends Employee {
 
 	@Override
 	public String toString() {
-		return "Leader ["+ super.toString()+",reviewTaskNumber=" + reviewTaskNumber + ", supportTaskNumber=" + supportTaskNumber
+		return "Leader ["+ super.toString()+", reviewTaskNumber=" + reviewTaskNumber + ", supportTaskNumber=" + supportTaskNumber
 				+ ", allowance=" + allowance + "]\n"  ;
 	}
 

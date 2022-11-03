@@ -1,14 +1,10 @@
 import java.util.ArrayList;
-import com.Employee;
-import com.Management;
-import com.Leader;
-import com.Dev;
 public class Caculate {
 	//input arraylist and string then return position of string in arraylist
 	public static int findPosition(ArrayList<Employee> employeeList, String empId){
 		// String listEmpId = employeeList.getEmpId();
 		//System.out.println(employeeList.indexOf(empId));
-		int temp=0;
+		int temp=-1;
 		for (int i = 0; i < employeeList.size(); i++)if(employeeList.get(i).getEmpId().contains(empId))temp=i;
 		return temp;
 	}

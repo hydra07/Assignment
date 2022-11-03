@@ -13,7 +13,10 @@ public class Management extends Employee {
 
 	public double calAllowance() {
 		Date currentDate = new Date();
-		int numberMonthWork = (int) ((currentDate.getTime() - this.getWorkStartingDate().getTime()) / 3600);
+		Date workStartingDate = this.getWorkStartingDate();
+		long tmp = Math.abs(currentDate.getTime()-workStartingDate.getTime());
+		long tmp2 = tmp/(24*60*60*1000);
+		long numberMonthWork =  (((tmp2)*8)/30);
 		if (numberMonthWork >= 36) {
 			return this.getProductivityScore() * 2000000;
 		} else {
@@ -58,7 +61,7 @@ public class Management extends Employee {
 
 	@Override
 	public String toString() {
-		return "Management ["+ super.toString()+"resolveIssueNumber=" + resolveIssueNumber + ", otherTaskNumber=" + otherTaskNumber
+		return "Management ["+ super.toString()+", resolveIssueNumber=" + resolveIssueNumber + ", otherTaskNumber=" + otherTaskNumber
 				+ ", allowance=" + allowance + "]\n" ;
 	}
 

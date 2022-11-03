@@ -28,6 +28,6 @@ public class Dev extends Employee {
 
 	@Override
 	public String toString() {
-		return "Dev ["+ super.toString()+"doneTaskNumber=" + doneTaskNumber + "]\n";
+		return "Dev ["+ super.toString()+", doneTaskNumber=" + doneTaskNumber + "]\n";
 	}
 }

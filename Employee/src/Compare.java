@@ -2,11 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import com.Employee;
-import com.Management;
-import com.Leader;
-import com.Dev;
-
 public class Compare{
 	//input data from arraylist 
 	//comapre income and account

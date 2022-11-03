@@ -8,10 +8,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import com.Employee;
-import com.Management;
-import com.Leader;
-import com.Dev;
 
 public class File {
   //read files path "D:\FPT\PRO192\Java\BT NHOM - Copy\Employee\src\data.csv" return list employeeList
